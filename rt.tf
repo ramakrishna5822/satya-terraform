@@ -1,7 +1,7 @@
 resource "aws_route_table" "rt" {
     vpc_id = aws_vpc.dev.id
     route {
-        gateway_id = aws_internet_gateway.igw.vpc_id
+        gateway_id = aws_internet_gateway.igw.id
         cidr_block = "0.0.0.0/0"
     }
     tags = {
